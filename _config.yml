@@ -19,3 +19,5 @@ github_username:  covid19india
 
 # Build settings
 markdown: kramdown
+
+theme: jekyll-theme-cayman
