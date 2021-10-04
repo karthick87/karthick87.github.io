@@ -185,6 +185,18 @@ Certificate:
          02:2d:f6:b4
 ```
 
+# Exporting Certificate of an URL (i.e https://google.com)
+
+```
+$ echo | openssl s_client -servername google.com -connect google.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > certificate.crt
+depth=2 C = US, O = Google Trust Services LLC, CN = GTS Root R1
+verify return:1
+depth=1 C = US, O = Google Trust Services LLC, CN = GTS CA 1C3
+verify return:1
+depth=0 CN = *.google.com
+verify return:1
+DONE
+```
 Access Certificate Manager in Windows 10 using the below command in Run Terminal
 
 certmgr.msc
