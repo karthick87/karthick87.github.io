@@ -22,7 +22,7 @@ ENGINESDIR: "/mingw64/lib/engines-1_1"
 Seeding source: os-specific
 ```
 
-Generating a Key Pair 
+# Generating a Key Pair 
 
 It contains both public and private key
 
@@ -34,14 +34,14 @@ Generating RSA private key, 2048 bit long modulus (2 primes)
 e is 65537 (0x010001)
 ```
 
-Extracting the Public Key
+# Extracting the Public Key from the Key Pair
 
 ```
 $ openssl rsa -in demo.key -pubout -out demo_public.key
 writing RSA key
 ```
 
-Creating a CSR
+# Creating a CSR
 
 ```
 $ openssl req -new -key demo.key -out demo.csr
@@ -66,7 +66,7 @@ A challenge password []:
 An optional company name []:
 ```
 
-Verifying CSR 
+# Verifying CSR 
 
 - Before Passing the CSR to the Certificate Authority, verify the CSR using the below command.
 
@@ -118,6 +118,15 @@ Certificate Request:
          1b:f5:c2:57:f2:bb:a6:af:be:45:05:5f:fb:f1:9d:98:2b:90:
          ae:14:e4:93
 verify OK
+```
+
+# Signing Certificate (Making Self Signed Certificate)
+
+```
+$ openssl x509 -in demo.csr -out demo.csr -req -signkey demo.key -days 365
+Signature ok
+subject=C = IN, ST = TN, L = Chennai, O = Demo, OU = Demo, CN = *.demo.com, emailAddress = abc@examp.com
+Getting Private key
 ```
 
 Access Certificate Manager in Windows 10 using the below command in Run Terminal
