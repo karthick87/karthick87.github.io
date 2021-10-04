@@ -123,10 +123,66 @@ verify OK
 # Signing Certificate (Making Self Signed Certificate)
 
 ```
-$ openssl x509 -in demo.csr -out demo.csr -req -signkey demo.key -days 365
+$ openssl x509 -in demo.csr -out demo.crt -req -signkey demo.key -days 365
 Signature ok
 subject=C = IN, ST = TN, L = Chennai, O = Demo, OU = Demo, CN = *.demo.com, emailAddress = abc@examp.com
 Getting Private key
+```
+
+# Verifying Self Signed Certificate
+
+```
+$ openssl x509 -text -noout -in demo.crt
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number:
+            1f:b0:d7:d5:8e:1f:09:0a:58:69:2e:d6:7a:c9:c3:8b:12:f0:56:b9
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = IN, ST = TN, L = Chennai, O = Demo, OU = Demo, CN = *.demo.com, emailAddress = abc@examp.com
+        Validity
+            Not Before: Oct  4 15:02:51 2021 GMT
+            Not After : Oct  4 15:02:51 2022 GMT
+        Subject: C = IN, ST = TN, L = Chennai, O = Demo, OU = Demo, CN = *.demo.com, emailAddress = abc@examp.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:d0:f0:03:50:28:e3:5d:0a:9c:98:57:80:13:8a:
+                    8e:8d:9c:c5:89:a3:3c:dc:5d:c1:7f:d3:f3:a7:4f:
+                    8b:1c:9e:69:86:70:88:14:c0:44:aa:6e:ca:de:c1:
+                    81:58:1e:57:a4:ca:c6:1b:49:6a:9f:85:c8:03:c2:
+                    ee:de:6b:6a:b5:8d:ee:9e:b0:bf:74:b5:1e:e3:74:
+                    4e:47:41:53:80:02:a5:3a:6e:08:ae:6f:59:18:8c:
+                    7a:d4:23:28:a1:09:86:a2:b6:38:d6:25:df:13:f1:
+                    92:50:47:11:5a:18:c8:f8:03:ea:92:bc:5c:74:71:
+                    36:5a:bf:74:93:29:64:c2:0d:0e:b2:69:0b:ca:30:
+                    73:fa:17:14:29:42:24:49:7f:a6:05:57:c9:d4:ac:
+                    b3:99:62:8c:85:d8:76:e0:9d:e7:c6:43:62:70:c0:
+                    68:86:fd:2e:51:0d:c5:8a:87:c6:5c:ce:e8:82:d0:
+                    b3:35:ca:82:e1:ed:51:a1:cd:98:71:49:da:87:37:
+                    c1:63:bd:8e:92:05:30:e7:20:ed:6f:70:36:f9:13:
+                    fa:46:ca:85:72:e2:93:b0:73:56:a5:5c:08:50:0f:
+                    42:3e:bb:04:dd:d7:d0:4a:36:b7:e8:fa:35:5c:84:
+                    27:3b:52:67:4d:9d:6f:03:b8:71:ef:4c:60:0e:48:
+                    b2:65
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: sha256WithRSAEncryption
+         29:e3:6e:09:37:52:6f:6e:64:5e:26:b6:3c:cf:ee:13:6b:7d:
+         97:8e:29:1e:3b:46:44:6e:d2:13:c0:7b:38:be:e7:7c:ff:8e:
+         df:01:18:83:6a:41:d2:db:82:fc:17:fd:d0:70:2c:d3:38:d6:
+         77:a8:dc:81:3d:2c:66:b6:9a:b7:e0:eb:1c:c6:3f:99:85:3a:
+         de:04:f0:fd:32:1d:2b:80:56:77:75:80:0f:58:bf:fb:c4:0b:
+         c2:c2:83:cb:0f:be:96:0f:31:a6:bd:97:73:ae:38:8c:84:1e:
+         02:ff:7a:e2:bb:7a:8e:1f:bb:8d:21:0e:9f:b4:12:e4:14:59:
+         6c:3a:3b:ec:db:90:45:1d:a9:d8:9c:de:28:41:a5:c4:1a:0a:
+         9c:ce:56:3f:23:77:d8:72:9d:b7:1a:a6:34:0b:65:fd:6b:15:
+         fc:00:bd:98:4f:b5:46:72:6e:7d:05:8c:9f:e1:8c:69:76:36:
+         a0:0f:4a:85:1d:6d:dd:b2:d7:d4:91:ad:28:01:dd:64:19:2a:
+         ff:81:6d:c4:a7:3b:0d:78:d8:11:9e:78:83:6e:a8:22:a8:8e:
+         67:2a:d8:81:d7:dd:c9:75:dc:25:25:57:83:37:75:5d:b9:a5:
+         3a:b2:5e:54:34:19:9c:3b:ca:fe:f9:29:0e:4f:25:44:b8:e1:
+         02:2d:f6:b4
 ```
 
 Access Certificate Manager in Windows 10 using the below command in Run Terminal
