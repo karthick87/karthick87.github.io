@@ -5,10 +5,10 @@ date:   2021-10-04 15:00:00 +0900
 categories: update
 ---
 
-- Generate a Key-Pair
-- Extract Public Key
+- Generate a Key-Pair (Contains both Public & Private Key)
+- Extract Public Key from the Key Pair
 - Generate CSR File
-- Generate Self-Signed Certificate
+- Making Self-Signed Certificate
 
 ```
 $ openssl version -a
