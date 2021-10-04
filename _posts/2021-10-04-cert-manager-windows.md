@@ -197,7 +197,24 @@ depth=0 CN = *.google.com
 verify return:1
 DONE
 ```
-Access Certificate Manager in Windows 10 using the below command in Run Terminal
+
+# Let's Encrypt
+
+Let's Encrypt Old CA certificates became invalid on 30-Sep-2021.
+
+https://letsencrypt.org/docs/dst-root-ca-x3-expiration-september-2021/
+
+Therefore we have to ensure that all our tools trust the new CA certificates which were created in 2015 but still is not distributed everywhere.
+
+- Download new Lets's Encrypt ISRG root certificate https://letsencrypt.org/certs/isrgrootx1.pem
+
+# Importing Let's Encrypt New CA Cert to the Java Keystore (Java's cacert)
+```
+C:\Program Files\Java\jdk-11.0.4\bin\keytool -import -trustcacerts -alias certAlias -file isrgrootx1.pem -keystore C:\Program Files\Java\jdk-11.0.4\lib\security\cacerts
+
+```
+
+# Access Certificate Manager in Windows 10 using the below command in Run Terminal
 
 certmgr.msc
 
