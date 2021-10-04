@@ -211,7 +211,14 @@ Therefore we have to ensure that all our tools trust the new CA certificates whi
 # Importing Let's Encrypt New CA Cert to the Java Keystore (Java's cacert)
 ```
 C:\Program Files\Java\jdk-11.0.4\bin\keytool -import -trustcacerts -alias certAlias -file isrgrootx1.pem -keystore C:\Program Files\Java\jdk-11.0.4\lib\security\cacerts
+```
 
+# Updating Let's Encrypt new CA Cert for different Tools
+
+## Git Bash
+- Each tools has their own Certificate Store. For Example, Git Bash Tool has all its Certificate under the below path.
+```
+C:\Program Files\Git\mingw64\ssl\certs
 ```
 
 # Access Certificate Manager in Windows 10 using the below command in Run Terminal
