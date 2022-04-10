@@ -6,16 +6,16 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: covid19india.org blog
-title_top: Stretchhhhh
-email: hello@covid19india.org
+title: Tech Blog
+title_top: Technical Documentation
+email: karthick87@github.com
 description: > # this means to ignore newlines until "baseurl:"
   A space to express some thoughts and opinions.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://karthick87.github.io" # the base hostname & protocol for your site
 permalink: /:year/:month/:day/:title/  # Make sure this format is followed everywhere. Comment section will break if we change this
-twitter_username: covid19indiaorg
-github_username:  covid19india
+twitter_username: karthick87
+github_username:  karthick87
 
 # Build settings
 markdown: kramdown
