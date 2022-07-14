@@ -10,8 +10,8 @@ categories: update
 ### Apache Maven Repository
 - By default the repository will be created at `C:\Users\karthick\.m2\repository`
 
-#### Default `C:\opt\apache-maven-3.6.3\conf\settings.xml` file of Apache Maven
-settings.xml
+### Default `C:\opt\apache-maven-3.6.3\conf\settings.xml` file of Apache Maven
+**settings.xml:**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
