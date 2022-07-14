@@ -277,7 +277,7 @@ under the License.
 - User Settings will be read from `C:\Users\murugkar\.m2\settings.xml`
 
 To Set the Path via Command Line (i.e As Administrator)
-- This will add the Path under `System Variables`.
+- This will add the Path under `**System Variables**`.
 ```cmd
 Microsoft Windows [Version 10.0.19044.1766]
 (c) Microsoft Corporation. All rights reserved.
