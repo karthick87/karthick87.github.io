@@ -297,3 +297,7 @@ C:\Program Files\Java\jdk1.8.0_333
 C:\Windows\system32>setx /M MAVEN_HOME "C:\Users\Asus\soft\apache-maven-3.8.6"
         SUCCESS: Specified value was saved.
 ```
+### Maven Install
+```
+> mvn dependency:purge-local-repository clean install
+```
