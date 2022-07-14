@@ -288,5 +288,9 @@ WARNING: The data being saved is truncated to 1024 characters.
 
 SUCCESS: Specified value was saved.
 
-C:\Windows\system32>
+C:\Windows\system32>echo %MAVEN_HOME%
+C:\opt\apache-maven-3.6.3
+
+C:\Windows\system32>echo %JAVA_HOME%
+C:\Program Files\Java\jdk1.8.0_333
 ```
