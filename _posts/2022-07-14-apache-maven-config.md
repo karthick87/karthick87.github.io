@@ -282,7 +282,7 @@ To Set the Path via Command Line (i.e As Administrator)
 Microsoft Windows [Version 10.0.19044.1766]
 (c) Microsoft Corporation. All rights reserved.
 
-C:\Windows\system32>setx /M PATH "%MAVEN_HOMEE%\bin;%PATH%"
+C:\Windows\system32>setx /M PATH "%MAVEN_HOME%\bin;%PATH%"
 
 WARNING: The data being saved is truncated to 1024 characters.
 
