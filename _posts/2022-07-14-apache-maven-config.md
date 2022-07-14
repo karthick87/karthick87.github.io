@@ -301,3 +301,10 @@ C:\Windows\system32>setx /M MAVEN_HOME "C:\Users\Asus\soft\apache-maven-3.8.6"
 ```
 > mvn dependency:purge-local-repository clean install
 ```
+
+### Maven Life Cycle
+- Maven has the concept of a build lifecycle, which is made up of different phases.
+- When you call mvn deploy, mvn will also execute every lifecycle phase before deploy, in order: validate, compile, test, package, verify, install.
+- Same for verify: validate, compile, test, package. Same for all other phases.
+- And as clean is not part of Maven’s default lifecycle, you end up with commands like mvn clean install or mvn clean package. Install or package will trigger all preceding phases, but you need to specify clean in addition.
+- clean: deletes the /target folder. So, the same result for both commands.
