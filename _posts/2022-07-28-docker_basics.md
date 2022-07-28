@@ -19,3 +19,9 @@ docker run  -p 8888:8888 --name notebooks -e JUPYTER_ENABLE_LAB=yes --volume=jup
 ```
 
 Note: Only Notebooks saved inside work directory will be persistent. 
+
+# Destructive Command
+
+```shell
+docker system prune --all --volumes --force
+```
