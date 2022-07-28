@@ -24,4 +24,16 @@ Note: Only Notebooks saved inside work directory will be persistent.
 
 ```shell
 docker system prune --all --volumes --force
+docker builder prune
+docker builder prune --all
+```
+
+# Mapping of overlay2 Folders to exact RepoDigest information
+```shell
+$ docker image inspect $(docker image ls -q)  --format '{{ .GraphDriver.Data.MergedDir}} -> {{.RepoDigests}}' | sed 's|/merged||g'
+```
+
+# To Remove all Log Files
+```shell
+$ find /var/lib/docker/containers/ -type f -name “*.log” -delete
 ```
