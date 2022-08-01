@@ -35,6 +35,8 @@ C:\Program Files\Java\jdk1.8.0_152\lib
 ```
 
 # Checking Java Version and Maven Version
+Note: The below output indicates that we are using Oracle Java. Oracle during the last few years restricted the free use of their Java. 
+
 ```shell
 C:\Users\murugkar>mvn -version
 Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63)
