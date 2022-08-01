@@ -74,6 +74,6 @@ keytool -importcert -alias "digicertassuredidg3 [jdk]" -file C:\Users\murugkar\d
 ```cmd
 keytool -delete -alias "digicertassuredidg3 [jdk]" -keystore "C:\Program Files\Java\jdk1.8.0_152\jre\lib\security\cacerts" -storepass changeit
 ```
-
 Note: To import or to delete certificate from the keystore, we need to execute the command from Elevated Prompt.
+
 ---
