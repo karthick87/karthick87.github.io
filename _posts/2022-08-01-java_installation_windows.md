@@ -77,3 +77,9 @@ keytool -delete -alias "digicertassuredidg3 [jdk]" -keystore "C:\Program Files\J
 Note: To import or to delete certificate from the keystore, we need to execute the command from Elevated Prompt.
 
 ---
+# SSL Certificate Guide
+When we establish a connection over HTTPS, the web server will respond by providing its site and intermediate certificates. It is then up to the client to complete the chain by having the root certificate. This chain validation is necessary for the client to trust the site.
+
+Since Chrome has the root certificate GeoTrust Global CA in its certificate store, our connection succeeds and we are not presented with any errors or warnings.
+
+Note: There may be more than one intermediate certificate in the chain depending on the site.
