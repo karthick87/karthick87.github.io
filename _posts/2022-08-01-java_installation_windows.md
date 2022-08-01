@@ -55,18 +55,23 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.333-b02, mixed mode)
 
 **Note:** The initial password of the cacerts keystore file is changeit.
 
-# To List All CA Certs
+# To List All Certificates from Java Keystore
 ```cmd
 keytool -list -v -keystore "%JAVA_HOME%\jre\lib\security\cacerts" -storepass changeit
 ```
 ---
-# To Export CA Cert
+# To Export Certificate from Java Keystore
 ```cmd
 keytool -export -alias "digicertassuredidg3 [jdk]" -keystore "C:\Program Files\Java\jdk1.8.0_333\jre\lib\security\cacerts" -rfc -file C:\Users\murugkar\digi_cert -storepass changeit
 ```
 ---
-# To Import CA Cert
+# To Import Certificate into Java Keystore
 ```cmd
 keytool -importcert -alias "digicertassuredidg3 [jdk]" -file C:\Users\murugkar\digi_cert -keystore "C:\Program Files\Java\jdk1.8.0_152\jre\lib\security\cacerts" -storepass changeit
+```
+---
+# To Delete Certificate from Java Keystore
+```cmd
+keytool -delete -alias "digicertassuredidg3 [jdk]" -keystore "C:\Program Files\Java\jdk1.8.0_152\jre\lib\security\cacerts"
 ```
 ---
