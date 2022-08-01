@@ -50,3 +50,18 @@ java version "1.8.0_333"
 Java(TM) SE Runtime Environment (build 1.8.0_333-b02)
 Java HotSpot(TM) 64-Bit Server VM (build 25.333-b02, mixed mode)
 ```
+# Java version: 1.8.0_152
+`cacerts` is where Java stores Public certificates of root CA's. Java uses cacerts to authenticate to the servers. Keystore is where Java stores the Private keys of the clients so that it can share it to the server when the server requests client authentication.
+
+**Note:** The initial password of the cacerts keystore file is changeit.
+
+# To List All CA Certs
+```cmd
+keytool -list -v -keystore "%JAVA_HOME%\jre\lib\security\cacerts" -storepass changeit
+```
+---
+# To Import CA Cert
+```cmd
+keytool -importcert -alias "digicertassuredidg3 [jdk]" -file C:\Users\murugkar\digi_cert -keystore "C:\Program Files\Java\jdk1.8.0_152\jre\lib\security\cacerts"
+```
+---
