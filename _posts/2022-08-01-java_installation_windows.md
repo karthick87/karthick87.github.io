@@ -60,6 +60,11 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.333-b02, mixed mode)
 keytool -list -v -keystore "%JAVA_HOME%\jre\lib\security\cacerts" -storepass changeit
 ```
 ---
+# To Export CA Cert
+```cmd
+keytool -export -alias "digicertassuredidg3 [jdk]" -keystore "C:\Program Files\Java\jdk1.8.0_333\jre\lib\security\cacerts" -rfc -file C:\Users\murugkar\digi_cert
+```
+---
 # To Import CA Cert
 ```cmd
 keytool -importcert -alias "digicertassuredidg3 [jdk]" -file C:\Users\murugkar\digi_cert -keystore "C:\Program Files\Java\jdk1.8.0_152\jre\lib\security\cacerts"
